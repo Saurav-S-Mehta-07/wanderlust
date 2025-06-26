@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust</title>
+</head>
+<body>
+    <h1>Listing Details: </h1>
+    <ul>
+        <li><%=listing.title%></li>
+        <li><%=listing.description%></li>
+        <li>&#x20B9;<%= listing.price.toLocaleString("en-IN") %></li>
+        <li><%=listing.location%></li>
+        <li><%=listing.country%></li>
+    </ul>
+    <br>
+    <a href="/listings/<%=listing._id%>/edit">Edit this listing</a>
+
+    <form action="/listings/<%=listing._id%>?_method=delete" method="post">
+        <button>Delete</button>
+    </form>
+</body>
+</html>
