@@ -12,7 +12,9 @@ const listingSchema = new Schema({
        default:"https://media.istockphoto.com/id/1026205392/photo/beautiful-luxury-home-exterior-at-twilight.jpg?s=612x612&w=0&k=20&c=HOCqYY0noIVxnp5uQf1MJJEVpsH_d4WtVQ6-OwVoeDo=",
        set : (v)=> v===""?"https://media.istockphoto.com/id/1026205392/photo/beautiful-luxury-home-exterior-at-twilight.jpg?s=612x612&w=0&k=20&c=HOCqYY0noIVxnp5uQf1MJJEVpsH_d4WtVQ6-OwVoeDo=": v,
     },
-    price: Number,
+    price: {
+        type:Number,
+    },
     location: String,
     country: String,
 });
