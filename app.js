@@ -72,7 +72,7 @@ app.get("/listings/:id", wrapAsync(async (req, res, next) => {
     if (!listing) {
         return next(new ExpressError(404, "Listing not found!"));
     }
-    res.render("listings/show", { listing }); 
+    res.render("listings/show", { listing , count}); 
 }));
 
 
@@ -109,6 +109,7 @@ app.delete("/listings/:id", wrapAsync(async(req,res)=>{
 //Reviews
 //post reviews route
 app.post("/listings/:id/reviews",validateReview,wrapAsync(async(req,res)=>{
+      
       let listing = await Listing.findById(req.params.id);
       let newReview = new Review(req.body.review);
 
@@ -117,7 +118,7 @@ app.post("/listings/:id/reviews",validateReview,wrapAsync(async(req,res)=>{
       await newReview.save();
       await listing.save();
 
-     res.redirect(`/listings/${listing._id}`);
+      res.redirect(`/listings/${listing._id}`);
 }));
 
 //Delete review route
