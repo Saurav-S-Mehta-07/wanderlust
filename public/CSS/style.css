@@ -63,13 +63,6 @@ body{
 
 
 /*cards*/
-
-.delete-btn{
-    background-color: white !important;
-    color: red !important;
-    border: none !important;
-    font-size: 1.5rem !important;
-}
 .listing-card{
     border: none !important;
     margin-bottom: 2rem;
