@@ -1,12 +1,28 @@
 <% layout("/layouts/boilerplate")%>
 
+<script>
+  window.MAP_TOKEN = "<%= MAP_TOKEN %>";
+  window.MAP_LOCATION = "<%= listing.location %>";
+  window.MAP_COUNTRY = "<%= listing.country %>";
+  window.MAP_TITLE = "<%= listing.title%>";
+</script>
+<script src="/js/map.js"></script>
+
+
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
 <div class="row mt-3 mb-3">
   <div class="col-8 offset-3">
     <h3><b><%=listing.title%></b></h3>
  </div>
 
     <div class="card col-6 offset-3 show-card listing-card">
-         <img src="<%= listing.image%> " class="card-img-top show-img" alt="Listing-img">
+         <img src="<%= listing.image.url%> " class="card-img-top show-img" alt="Listing-img">
          <div class="card-body">
             <p class="card-text"><i>Owned by: <%=listing.owner.username%></i></p>
             <p class="card-text"><%=listing.description%></p> 
@@ -56,14 +72,15 @@
             <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" required></textarea>
             <div class="invalid-feedback">Please add some comments for review</div>
          </div>
-         <button class="btn btn-outline-dark">Submit</button>
+         <button class="btn btn-outline-dark mb-3">Submit</button>
       </form>
       <%}%>
 
-     <hr>
 
-     <p><b>All Reviews</b></p>
+    <% if(listing.reviews.length>0) {%> 
      <div class="row">
+     <hr>
+     <p><b>All Reviews</b></p>
       <% for (review of listing.reviews){%>
          <div class="card col-5 ms-3 mb-3">
             <div class="card-body">
@@ -77,8 +94,17 @@
                   <button class="btn btn-dark delete-btn">delete &#128465</button>
             </form>
          </div>
-      <%}%>
+       <%}%>
       </div>
+      <%}%>
+
+   <hr>
+
+     <div class="col-8 mb-3">
+      <h3>Where you'll be</h3>
+      <div id="map" style="height: 300px;"></div>
+     </div>
+
     </div>
 </div>
 

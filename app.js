@@ -71,6 +71,12 @@ app.use((req,res,next)=>{
     next();
 });
 
+app.use((req, res, next) => {
+  res.locals.MAP_TOKEN = process.env.MAP_TOKEN;
+  next();
+});
+
+
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);

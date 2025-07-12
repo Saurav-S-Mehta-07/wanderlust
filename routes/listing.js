@@ -12,17 +12,20 @@ const upload = multer({ storage });
 
 router.route("/")
 .get(wrapAsync(listingController.index)) 
-// .post(isLoggedin,upload.single("listing[image]"), validateListing,wrapAsync(listingController.createListing));
-.post(upload.single("listing[image]"), (req, res) => {
-   res.send(req.file);
-});
+.post(isLoggedin,
+      upload.single("listing[image]"),
+      validateListing,
+      wrapAsync(listingController.createListing)
+   );
+
 
 //new route
 router.get("/new",isLoggedin,listingController.renderNewForm);
 
 router.route("/:id")
 .get(wrapAsync(listingController.showListing))
-.put(isLoggedin,isOwner,validateListing,wrapAsync(listingController.updateListing)) 
+.put(isLoggedin,isOwner, upload.single("listing[image]"),
+     validateListing,wrapAsync(listingController.updateListing)) 
 .delete(isLoggedin,isOwner,wrapAsync(listingController.destroyListing));
 
 router.get("/:id/edit",isLoggedin,isOwner,wrapAsync(listingController.renderEditForm));
