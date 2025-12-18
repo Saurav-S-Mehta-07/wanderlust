@@ -14,9 +14,10 @@ const User = require("./models/user.js");
 const cookieParser = require('cookie-parser');
 app.use(cookieParser("secretcode"));
 
-const listings = require('./routes/listing.js');
-const reviews  = require('./routes/review.js');
-const { register } = require("module");
+const listingRouter = require('./routes/listing.js');
+const reviewRouter = require('./routes/review.js');
+const userRouter = require('./routes/user.js');
+
 
 let Port = 8080;
 const MONGO_URL = "mongodb://127.0.0.1:27017/chillcasa";
@@ -70,22 +71,10 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get("/demouser",async(req,res)=>{
-    let fakeUser = new User({
-        email : "student@gmail.com",
-        username : "delta-Student",
-    });
-
-    let  registerUer = await User.register(fakeUser, "helloworld");
-    res.send(registerUer);
-})
-
-
-//listings routes
-app.use("/listings",listings);
-
-//reviews routes
-app.use("/listings/:id/reviews",reviews);
+//routers
+app.use("/listings",listingRouter);
+app.use("/listings/:id/reviews",reviewRouter);
+app.use("/",userRouter);
 
 //page not found
 app.use((req,res,next)=>{
