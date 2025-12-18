@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../models/user");
 const wrapAsync = require('../utils/wrapAsync');
 const passport = require('passport');
+const { saveRedirectUrl } = require('../middleware');
 
 router.get("/signup",(req,res)=>{
     res.render("users/signup");
@@ -13,9 +14,13 @@ router.post("/signup",wrapAsync(async(req,res)=>{
         let {username, email, password} = req.body;
         const newUser = new User({email,username});
         const registeredUser = await User.register(newUser,password);
-        console.log(registeredUser);
-        req.flash("success","Welcome to ChillCasa");
-        res.redirect("/listings");
+        req.login(registeredUser,(err)=>{
+             if(err){
+               return next(err);
+             }
+             req.flash("success","Welcome to ChillCasa");
+             res.redirect("/listings");
+        });
     } 
     catch(err){
         req.flash("error", err.message);
@@ -28,13 +33,15 @@ router.get("/login",(req,res)=>{
 })
 
 router.post("/login",
+    saveRedirectUrl,
     passport.authenticate("local",
         {failureRedirect :'/login',
         failureFlash:true
     }),
     async(req,res)=>{
         req.flash("success","Welcome back to ChillCasa");
-        res.redirect("/listings");
+        let redirectUrl = res.locals.redirectUrl || "/listings";
+        res.redirect(redirectUrl);
 });
 
 
