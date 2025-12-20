@@ -184,3 +184,30 @@ body{
     width: fit-content;
     border-radius: 20px !important;
 }
+
+/* map */
+  #map {
+    height: 50vh;
+    width: 50%;
+    border-radius: 10px;
+  }
+
+.leaflet-popup-content {
+    font-size: 16px;
+    max-width: 200px; 
+  }
+
+@media (max-width: 577px) {
+
+  .leaflet-popup-content {
+    font-size: 16px;
+    max-width: 100px; 
+  }
+
+  .leaflet-popup-tip {
+    width: 10px;   
+    height: 6px;
+  }
+
+}
+
