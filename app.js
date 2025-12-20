@@ -55,8 +55,7 @@ async function main(){
 }
 
 app.get("/",(req,res)=>{
-    console.log(req.cookies);
-    res.send("At Home");
+   res.redirect("/listings");
 })
 
 app.use(session(sessionOption));
