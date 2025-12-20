@@ -30,9 +30,14 @@
                please enter description
            </div>
          </div>
+
+         <div class="mb-2">
+            <p class="card-text">Original Listing Image</p>
+            <img src="<%=ImageUrl%>" alt="lisitingImage" class="show-img">
+         </div>
   
          <div  class="mb-2">
-           <label for="image">Image</label>
+           <label for="image">Upload new Image</label>
            <input name="listing[image]" 
                   value="<%= listing.image %>" 
                   type="file"  class="form-control"
