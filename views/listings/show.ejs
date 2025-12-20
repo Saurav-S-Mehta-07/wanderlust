@@ -1,6 +1,13 @@
  <% layout("/layouts/boilerplate.ejs")  %>
 
+ <script>
+    const placeName = "<%=listing.location%>";
+    const title = "<%=listing.title%>";
+    const map_api_key = "<%=api_key%>";
+ </script>
+
  <div class="row mt-3">
+
     <div class="col-8 offset-2">
         <h3><b><%=listing.title%></b></h3>
     </div>
@@ -101,4 +108,10 @@
   
       </div>
 
+    <!-- map -->
+     <h3 class="mb-3 col-8 offset-2">Where you'll be</h3>
+    <div id="map" class="mb-3 col-8 offset-3"></div>
+    
 </div>
+
+<script src="/js/map.js"></script>
