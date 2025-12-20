@@ -29,7 +29,9 @@ module.exports.showListing = async(req,res,next)=>{
         req.flash("error","Listing you requested for does not exist");
         return res.redirect("/listings");
     }
-    res.render("listings/show",{listing});
+    let api_key = process.env.MAP_API_KEY;
+
+    res.render("listings/show",{listing,api_key});
 };
 
 module.exports.updateListing = async(req,res)=>{
