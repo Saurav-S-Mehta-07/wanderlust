@@ -134,23 +134,23 @@ ATLASDB_URL=your_mongoatlas_url
 
 ## ▶️ Installation & Setup
 
-```bash
+```
 
-# Clone the repository
-git clone https://github.com/Saurav-S-Mehta-07/ChillCasa.git
+ # Clone the repository
+ git clone https://github.com/Saurav-S-Mehta-07/ChillCasa.git
 
-# Go to project directory
-cd ChillCasa
+ # Go to project directory
+ cd ChillCasa
 
-# Install dependencies
-npm install
+ # Install dependencies
+ npm install
 
-# Start the application
-nodemon app.js
+ # Start the application
+ nodemon app.js
+```
 
 
 ---
-
 
 ## 📌 Use Case
 
@@ -176,6 +176,7 @@ ChillCasa is designed for:
 ## 📄 License
 
 This project is for educational and learning purposes.
+---
 
 
 
