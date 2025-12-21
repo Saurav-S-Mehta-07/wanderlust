@@ -1,8 +1,11 @@
-ChillCasa – Airbnb‑Style Property Listing Platform
+# ChillCasa – Airbnb‑Style Property Listing Platform
 
 ChillCasa is a full-stack web application designed to allow users to browse and explore properties (homes, apartments, vacation rentals). The project follows the MVC (Model–View–Controller) architecture using Node.js, Express, MongoDB, and EJS templates for the frontend.
 
-🚀 Features
+---
+
+## 🚀 Features
+
 Property Browsing & Search
 
 Search and filter properties by location, country, or title (name)
@@ -39,7 +42,9 @@ Centralized error middleware
 
 Proper HTTP status codes and messages
 
-🛠 Tech Stack
+---
+
+## 🛠 Tech Stack
 
 Backend
 
@@ -73,7 +78,11 @@ Maps
 
 Map integration using MapTiler / Google Maps API
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
+```
 ChillCasa/
 │
 ├── controllers/       # Request handling logic
@@ -87,7 +96,11 @@ ChillCasa/
 ├── app.js             # Application entry point
 └── README.md          # Project documentation
 
-🔐 Authentication Flow
+```
+
+---
+
+## 🔐 Authentication Flow
 
 User registers or logs in
 
@@ -97,7 +110,9 @@ Session is created and stored
 
 Protected routes verify authentication and authorization
 
-🗄 Database
+---
+
+## 🗄 Database
 
 Hosted on MongoDB Atlas.
 Collections include:
@@ -108,24 +123,36 @@ listings – Property information and images
 
 reviews – User reviews for properties
 
-☁ Image Storage
+---
+
+## ☁ Image Storage
 
 Property images uploaded to Cloudinary
 
 Only image URLs are stored in MongoDB
 
-⚙️ Environment Variables
+---
 
-Create a .env file:
+## ⚙️ Environment Variables
 
+Create a `.env` file and add:
+
+```
+SECRET=your_secret
 MONGO_URI=your_mongodb_atlas_url
 SESSION_SECRET=your_secret
 CLOUDINARY_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 MAP_API_KEY=your_map_api_key
+```
 
-▶️ Installation & Setup
+---
+
+## ▶️ Installation & Setup
+
+```bash
+
 # Clone the repository
 git clone https://github.com/Saurav-S-Mehta-07/ChillCasa.git
 
@@ -138,7 +165,11 @@ npm install
 # Start the application
 nodemon app.js
 
-📌 Use Case
+
+---
+
+
+## 📌 Use Case
 
 ChillCasa is designed for:
 
@@ -150,7 +181,9 @@ Property owners to showcase their homes
 
 ⚠️ Note: This system is primarily for educational and learning purposes.
 
-📖 Learning Outcomes
+---
+
+## 📖 Learning Outcomes
 
 MVC architecture in Node.js
 
@@ -166,8 +199,8 @@ Map integration for property locations
 
 Middleware-driven error handling
 
-📄 License
+---
 
-This project is for educational and learning purposes only.
+## 📄 License
 
-
+This project is for educational and learning purposes.
