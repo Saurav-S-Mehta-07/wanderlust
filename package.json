@@ -1,4 +1,7 @@
 {
+  "engines":{
+     "node":"v22.14.0"
+  },
   "name": "chillcasa",
   "version": "1.0.0",
   "description": "",
