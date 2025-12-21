@@ -10,7 +10,7 @@ module.exports.ListingSchema = Joi.object({
         image : Joi.string().allow("",null),
         category: Joi.string()
         .valid(
-            "trending", "rooms", "iconic cities", "mountains", "castles", "amazing pool", "camping", "farms", "forest"
+            "trending", "rooms", "iconic cities", "mountains", "castles", "amazing pool", "camping", "farms", "forest", "arctic"
         )
       }).required()
 });

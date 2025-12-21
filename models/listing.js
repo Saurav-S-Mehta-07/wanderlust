@@ -34,7 +34,7 @@ const listingSchema = new Schema({
         type : String,
         default :"trending",
         enum :["trending","forests","rooms","iconic cities", "mountains",
-             "castles", "amazing pools", "forests", "farms", "camping"
+             "castles", "amazing pools", "forests", "farms", "camping","arctic"
             ],
     }
 });
