@@ -33,7 +33,7 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 
 ## 🛠 Tech Stack
 
-###Backend
+### Backend
 
 * **Node.js** – Runtime environment
 
@@ -43,7 +43,7 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 
 * **Mongoose** – ODM for MongoDB
 
-###Authentication & Security
+### Authentication & Security
 
 * **Passport.js** – Authentication
 
@@ -51,17 +51,17 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 
 * **Custom middleware** – Route protection
 
-###File & Image Handling
+### File & Image Handling
 
 * **Cloudinary** – Cloud-based image storage
 
 * **Multer** – File upload handling
 
-###Architecture
+### Architecture
 
 * **MVC (Model–View–Controller)** pattern
 
-##Maps
+## Maps
 
 * Map integration using MapTiler / Google Maps API
 
@@ -187,6 +187,7 @@ ChillCasa is designed for:
 ## 📄 License
 
 This project is for educational and learning purposes.
+
 
 
 
