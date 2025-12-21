@@ -63,7 +63,7 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 
 ## Maps
 
-* Map integration using MapTiler / Google Maps API
+* Map integration using MapTiler
 
 ---
 
@@ -187,6 +187,7 @@ ChillCasa is designed for:
 ## 📄 License
 
 This project is for educational and learning purposes.
+
 
 
 
