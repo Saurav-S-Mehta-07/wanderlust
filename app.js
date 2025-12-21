@@ -10,6 +10,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require('express-session');
+const MongoStore = require('connect-mongo').default;
 const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
@@ -24,7 +25,8 @@ const userRouter = require('./routes/user.js');
 
 
 let Port = 8080;
-const MONGO_URL = "mongodb://127.0.0.1:27017/chillcasa";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/chillcasa";
+const dbUrl = process.env.ATLASDB_URL;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -34,7 +36,21 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"public")));
 
+
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto  :{
+        secret : `${process.env.SECRET}`,
+    },
+    touchAfter : 24 * 3600,
+});
+
+store.on("error",(err)=>{
+    console.log("Error in MONGO SESSION STORE", err);
+});
+
 const sessionOption = {
+    store,
     secret : `${process.env.SECRET}`,
     resave: false,
     saveUninitialized: true,
@@ -46,12 +62,13 @@ const sessionOption = {
 }
 
 
+
 main().then((res)=>{
     console.log("MongoDB connetion successful");
 }).catch(err=>console.log(err));
 
 async function main(){
-    mongoose.connect(MONGO_URL);
+    mongoose.connect(dbUrl);
 }
 
 app.get("/",(req,res)=>{
