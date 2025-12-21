@@ -14,28 +14,20 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
    * Map integration to show property location
 
 * **Authentication**
-
-*User login and registration
-
-Secure authentication using Passport.js
+   * User login and registration
+   * Secure authentication using Passport.js
 
 * **Authorization**
-
-*Protected routes for logged-in users
-
-*Admin or property owners can manage listings (if implemented)
+   * Protected routes for logged-in users
+   * Admin or property owners can manage listings (if implemented)
 
 * **Image Handling**
-
-*Property images uploaded via Cloudinary
-
-*Only image URLs stored in MongoDB
+   * Property images uploaded via Cloudinary
+   * Only image URLs stored in MongoDB
 
 * **Error Handling**
-
-*Centralized error middleware
-
-*Proper HTTP status codes and messages
+   * Centralized error middleware
+   * Proper HTTP status codes and messages
 
 ---
 
@@ -110,20 +102,17 @@ ChillCasa/
 
 * Hosted on **MongoDB Atlas.**
 * Collections include:
-
-*users – User credentials and profiles
-
-*listings – Property information and images
-
-*reviews – User reviews for properties
+  * users – User credentials and profiles
+  * listings – Property information and images
+  * reviews – User reviews for properties
 
 ---
 
 ## ☁ Image Storage
 
-*Property images uploaded to Cloudinary
+  * Property images uploaded to Cloudinary
 
-*Only image URLs are stored in MongoDB
+  * Only image URLs are stored in MongoDB
 
 ---
 
@@ -198,6 +187,7 @@ ChillCasa is designed for:
 ## 📄 License
 
 This project is for educational and learning purposes.
+
 
 
 
