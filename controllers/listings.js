@@ -1,13 +1,21 @@
 const Listing = require('../models/listing');
 
 module.exports.Index = async (req,res)=>{
-   let {category} = req.query;
+   let {category,search} = req.query;
+
    let allListings;
    if(category){
       allListings = await Listing.find({category:category});
-      console.log(allListings);
       if(!allListings.length){
          req.flash("error","No listings found in this category.");
+         return res.redirect("/listings");
+      }
+   }
+   else if(search){
+      const regex = new RegExp(search, 'i');
+      allListings = await Listing.find({$or:[{country:regex},{location:regex},{title:regex}]});
+      if(!allListings.length){
+         req.flash("error","No listings match your search.");
          return res.redirect("/listings");
       }
    }
