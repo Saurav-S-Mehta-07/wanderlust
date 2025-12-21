@@ -1,82 +1,82 @@
 # ChillCasa – Airbnb‑Style Property Listing Platform
 
-ChillCasa is a full-stack web application designed to allow users to browse and explore properties (homes, apartments, vacation rentals). The project follows the MVC (Model–View–Controller) architecture using Node.js, Express, MongoDB, and EJS templates for the frontend.
+ChillCasa is a full-stack web application designed to allow users to browse and explore properties (homes, apartments, vacation rentals). The project follows the **MVC (Model–View–Controller)** architecture using **Node.js, Express, MongoDB, and EJS templates** for the frontend.
 
 ---
 
 ## 🚀 Features
 
-Property Browsing & Search
+* **Property Browsing & Search**
 
-Search and filter properties by location, country, or title (name)
+*Search and filter properties by location, country, or title (name)
 
-View featured and filtered property listings
+*View featured and filtered property listings
 
-Property Details
+*Property Details
 
-View individual property details with images, description, and maps
+*View individual property details with images, description, and maps
 
-Map integration to show property location
+*Map integration to show property location
 
-Authentication
+* **Authentication**
 
-User login and registration
+*User login and registration
 
 Secure authentication using Passport.js
 
-Authorization
+* **Authorization**
 
-Protected routes for logged-in users
+*Protected routes for logged-in users
 
-Admin or property owners can manage listings (if implemented)
+*Admin or property owners can manage listings (if implemented)
 
-Image Handling
+* **Image Handling**
 
-Property images uploaded via Cloudinary
+*Property images uploaded via Cloudinary
 
-Only image URLs stored in MongoDB
+*Only image URLs stored in MongoDB
 
-Error Handling
+* **Error Handling**
 
-Centralized error middleware
+*Centralized error middleware
 
-Proper HTTP status codes and messages
+*Proper HTTP status codes and messages
 
 ---
 
 ## 🛠 Tech Stack
 
-Backend
+###Backend
 
-Node.js – Runtime environment
+* **Node.js** – Runtime environment
 
-Express.js – Web framework
+* **Express.js** – Web framework
 
-MongoDB Atlas – Cloud database
+* **MongoDB Atlas** – Cloud database
 
-Mongoose – ODM for MongoDB
+* **Mongoose** – ODM for MongoDB
 
-Authentication & Security
+###Authentication & Security
 
-Passport.js – Authentication
+* **Passport.js** – Authentication
 
-Express-Session – Session management
+* **Express-Session** – Session management
 
-Custom middleware – Route protection
+* **Custom middleware** – Route protection
 
-File & Image Handling
+###File & Image Handling
 
-Cloudinary – Cloud-based image storage
+* **Cloudinary** – Cloud-based image storage
 
-Multer – File upload handling
+* **Multer** – File upload handling
 
-Architecture
+###Architecture
 
-MVC (Model–View–Controller) pattern
+* **MVC (Model–View–Controller)** pattern
 
-Maps
+##Maps
 
-Map integration using MapTiler / Google Maps API
+* Map integration using MapTiler / Google Maps API
 
 ---
 
@@ -88,8 +88,7 @@ ChillCasa/
 ├── controllers/       # Request handling logic
 ├── models/            # Mongoose schemas
 ├── routes/            # Application routes
-├── middlewares/       # Auth & error handling
-├── config/            # DB, passport, cloudinary config
+├── middlewares/       # Auth & error handling         
 ├── views/             # EJS / template files
 ├── public/            # Static assets (CSS/JS/Images)
 ├── utils/             # Helper functions
@@ -102,34 +101,34 @@ ChillCasa/
 
 ## 🔐 Authentication Flow
 
-User registers or logs in
+1. User registers or logs in
 
-Passport authenticates credentials
+2. Passport authenticates credentials
 
-Session is created and stored
+3. Session is created and stored
 
-Protected routes verify authentication and authorization
+4. Protected routes verify authentication and authorization
 
 ---
 
 ## 🗄 Database
 
-Hosted on MongoDB Atlas.
-Collections include:
+* Hosted on **MongoDB Atlas.**
+* Collections include:
 
-users – User credentials and profiles
+*users – User credentials and profiles
 
-listings – Property information and images
+*listings – Property information and images
 
-reviews – User reviews for properties
+*reviews – User reviews for properties
 
 ---
 
 ## ☁ Image Storage
 
-Property images uploaded to Cloudinary
+*Property images uploaded to Cloudinary
 
-Only image URLs are stored in MongoDB
+*Only image URLs are stored in MongoDB
 
 ---
 
@@ -173,34 +172,35 @@ nodemon app.js
 
 ChillCasa is designed for:
 
-Users to browse and explore property listings
+*Users to browse and explore property listings
 
-View property details including images, description, and location on maps
+*View property details including images, description, and location on maps
 
-Property owners to showcase their homes
+*Property owners to showcase their homes
 
-⚠️ Note: This system is primarily for educational and learning purposes.
+*⚠️ Note: This system is primarily for educational and learning purposes.
 
 ---
 
 ## 📖 Learning Outcomes
 
-MVC architecture in Node.js
+* MVC architecture in Node.js
 
-Authentication & authorization using Passport
+* Authentication & authorization using Passport
 
-Session-based security
+ * Session-based security
 
-MongoDB Atlas integration
+* MongoDB Atlas integration
 
-Cloudinary image uploads
+* Cloudinary image uploads
 
-Map integration for property locations
+* Map integration for property locations
 
-Middleware-driven error handling
+* Middleware-driven error handling
 
 ---
 
 ## 📄 License
 
 This project is for educational and learning purposes.
+
