@@ -7,11 +7,11 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 ## 🚀 Features
 
 * **Property Browsing & Search**
-* Search and filter properties by location, country, or title (name)
-* View featured and filtered property listings
-* Property Details
-* View individual property details with images, description, and maps
-* Map integration to show property location
+   * Search and filter properties by location, country, or title (name)
+   * View featured and filtered property listings
+   * Property Details
+   * View individual property details with images, description, and maps
+   * Map integration to show property location
 
 * **Authentication**
 
@@ -198,5 +198,6 @@ ChillCasa is designed for:
 ## 📄 License
 
 This project is for educational and learning purposes.
+
 
 
