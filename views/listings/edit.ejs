@@ -90,6 +90,17 @@
                </div>
             </div>
          </div>
+
+         <div class="mb-3">
+          <label for="category" class="form-label">Category</label>
+          <select name="listing[category]" id="category" class="form-select" required>
+            <% const categories = ["trending", "rooms", "iconic cities", "mountains", "castles", "amazing pool", "camping", "farms", "forest"]; %>
+            <% categories.forEach(cat => { %>
+              <option value="<%= cat %>" <%= listing.category === cat ? "selected" : "" %>><%= cat %></option>
+            <% }) %>
+          </select>
+          <div class="invalid-feedback">Please select a category</div>
+        </div>
   
          
         <button  class="mb-2 edit-btn">Edit</button>
