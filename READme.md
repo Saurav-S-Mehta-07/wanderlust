@@ -121,13 +121,13 @@ ChillCasa/
 Create a `.env` file and add:
 
 ```
-SECRET=your_secret
-MONGO_URI=your_mongodb_atlas_url
-SESSION_SECRET=your_secret
-CLOUDINARY_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-MAP_API_KEY=your_map_api_key
+SECRET=your_session_secret_key
+CLOUD_NAME=your_cloud_name
+CLOUD_API_KEY=your_cloud_api_key
+CLOUD_API_SECRET=your_cloud_api_secret
+MAP_API_KEY= your_map_api_key
+ATLASDB_URL=your_mongoatlas_url
+
 ```
 
 ---
@@ -156,37 +156,27 @@ nodemon app.js
 
 ChillCasa is designed for:
 
-*Users to browse and explore property listings
-
-*View property details including images, description, and location on maps
-
-*Property owners to showcase their homes
-
-*⚠️ Note: This system is primarily for educational and learning purposes.
+   * Users to browse and explore property listings
+   * View property details including images, description, and location on maps
+   * Property owners to showcase their homes
+   * ⚠️ Note: This system is primarily for educational and learning purposes.
 
 ---
 
 ## 📖 Learning Outcomes
-
-* MVC architecture in Node.js
-
-* Authentication & authorization using Passport
-
- * Session-based security
-
-* MongoDB Atlas integration
-
-* Cloudinary image uploads
-
-* Map integration for property locations
-
-* Middleware-driven error handling
-
+   * MVC architecture in Node.js
+   * Authentication & authorization using Passport
+   * Session-based security
+   * MongoDB Atlas integration
+   * Cloudinary image uploads
+   * Map integration for property locations
+   * Middleware-driven error handling
 ---
 
 ## 📄 License
 
 This project is for educational and learning purposes.
+
 
 
 
