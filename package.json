@@ -2,7 +2,7 @@
   "engines":{
      "node":"v22.14.0"
   },
-  "name": "chillcasa",
+  "name": "wanderlust",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

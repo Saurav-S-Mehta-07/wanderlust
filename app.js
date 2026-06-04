@@ -25,7 +25,7 @@ const userRouter = require('./routes/user.js');
 
 
 let Port = process.env.PORT || 8080;
-// const MONGO_URL = "mongodb://127.0.0.1:27017/chillcasa";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
 
 app.set("view engine", "ejs");

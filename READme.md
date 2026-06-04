@@ -1,6 +1,6 @@
-# ChillCasa – Airbnb‑Style Property Listing Platform
+# wanderlust – Airbnb‑Style Property Listing Platform
 
-ChillCasa is a full-stack web application designed to allow users to browse and explore properties (homes, apartments, vacation rentals). The project follows the **MVC (Model–View–Controller)** architecture using **Node.js, Express, MongoDB, and EJS templates** for the frontend.
+wanderlust is a full-stack web application designed to allow users to browse and explore properties (homes, apartments, vacation rentals). The project follows the **MVC (Model–View–Controller)** architecture using **Node.js, Express, MongoDB, and EJS templates** for the frontend.
 
 ---
 
@@ -70,17 +70,20 @@ ChillCasa is a full-stack web application designed to allow users to browse and 
 ## 📂 Project Structure
 
 ```
-ChillCasa/
-│
-├── controllers/       # Request handling logic
-├── models/            # Mongoose schemas
-├── routes/            # Application routes
-├── middlewares/       # Auth & error handling         
-├── views/             # EJS / template files
-├── public/            # Static assets (CSS/JS/Images)
-├── utils/             # Helper functions
-├── app.js             # Application entry point
-└── README.md          # Project documentation
+wanderlust/
+├── controllers/ # Route handlers
+├── init/ # DB initialization
+├── models/ # Database schemas
+├── routes/ # Express routes
+├── views/ # EJS templates
+├── public/ # Static assets
+├── utils/ # Helper functions
+├── app.js # Application entry point
+├── cloudConfig.js # Cloudinary configuration
+├── middleware.js # Auth & error handling middleware
+├── schema.js # Validation schemas
+├── package.json
+└── README.md
 
 ```
 
@@ -137,10 +140,10 @@ ATLASDB_URL=your_mongoatlas_url
 ```
 
  # Clone the repository
- git clone https://github.com/Saurav-S-Mehta-07/ChillCasa.git
+ git clone https://github.com/Saurav-S-Mehta-07/wanderlust.git
 
  # Go to project directory
- cd ChillCasa
+ cd wanderlust
 
  # Install dependencies
  npm install
@@ -154,7 +157,7 @@ ATLASDB_URL=your_mongoatlas_url
 
 ## 📌 Use Case
 
-ChillCasa is designed for:
+wanderlust is designed for:
 
    * Users to browse and explore property listings
    * View property details including images, description, and location on maps
