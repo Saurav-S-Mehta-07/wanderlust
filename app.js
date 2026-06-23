@@ -22,10 +22,15 @@ app.use(cookieParser("secretcode"));
 const listingRouter = require('./routes/listing.js');
 const reviewRouter = require('./routes/review.js');
 const userRouter = require('./routes/user.js');
+const chatbotRoute = require("./routes/chatbot.js");
+
 
 
 let Port = process.env.PORT || 8080;
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
 const dbUrl = process.env.ATLASDB_URL;
 
 app.set("view engine", "ejs");
@@ -96,6 +101,9 @@ app.use((req,res,next)=>{
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
+
+// chatbot route
+app.use("/chat", chatbotRoute);
 
 //page not found
 app.use((req,res,next)=>{
